@@ -10,7 +10,7 @@ const Footer = () => {
             ©2023 THE OFFICE OF THE SENATE OF THE FEDERAL REPUBLIC OF NIGERIA.
             All rights reserved.
           </p>
-          <p>
+          <p className="text-xs lg:text-base">
             By using this site you agree to the Terms of Service. Site by Dammy
             Digital Concepts
           </p>
