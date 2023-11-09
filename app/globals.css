@@ -18,6 +18,7 @@
 
 :root {
   --primary-color: #00355f;
+  --secondary: #242528;
 }
 
 @media (prefers-color-scheme: dark) {

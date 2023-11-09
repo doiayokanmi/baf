@@ -28,7 +28,7 @@ const Navbar = () => {
         >
             {
                 links.map((link, index) => (
-                    <Link href={link.linkto} className={`uppercase p-2 hover:text-primary ${currentPath === link.linkto && 'lg:text-primary bg-primary font-bold lg:bg-transparent text-white'}`} key={index}>{link.title}</Link>
+                    <Link href={link.linkto} className={`uppercase p-2 hover:text-primary ${currentPath === link.linkto && 'lg:text-primary bg-primary lg:font-extrabold lg:bg-transparent text-white'}`} key={index}>{link.title}</Link>
                 ))
             }
           
