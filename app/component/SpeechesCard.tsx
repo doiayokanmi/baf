@@ -10,16 +10,15 @@ const SpeechesCard = () => {
           whileHover={{ scale: 1.02 }}
           className="p-4 border rounded shadow"
         >
-          <h1 className="text-xl font-bold">
+            <p className="text-red-700 capitalize font-bold">
+            speeches
+          </p>
+          <h1 className="text-xl py-6 font-extrabold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
             earum?
           </h1>
-          <p className="py-4">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
-            aperiam enim dolore odio soluta blanditiis consequuntur? Corrupti
-            temporibus sunt deserunt!
-          </p>
-          <p>12 October, 2023</p>
+          
+          <p className="font-bold text-gray-500">12 October, 2023</p>
         </motion.div>
       </div>
     </>
