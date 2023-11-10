@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Video from "./Video";
 
 const FeaturedVideo = () => {
   const container = useRef(null);
@@ -19,10 +20,19 @@ const FeaturedVideo = () => {
         </motion.h1>
 
         <div className="flex flex-col lg:flex-row border border-16">
-          <motion.div whileHover={{ scale: 1 }} className="basis-2/3">
-            lorem300
-          </motion.div>
-          <div className="basis-1/3"></div>
+          <div className="basis-1/2">
+            <Video videoSrc="/video/omoluabi.mp4" />
+          </div>
+          <div className="basis-1/2 relative bg-secondary text-white font-bold italic flex justify-center items-center text-center p-4 text-2xl">
+            <p className="text-red-700 text-9xl absolute top-4 left-4 ">
+              &quot;
+            </p>{" "}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat
+            asperiores ipsam accusantium dolorem cumque ex cum. Neque,
+            temporibus perspiciatis. Eos ad sequi ab libero doit mollitia
+            deleniti soluta doloribus.{" "}
+            <p className="text-red-700 text-9xl absolute -bottom-8 right-8">&quot;</p>
+          </div>
         </div>
       </section>
     </>
