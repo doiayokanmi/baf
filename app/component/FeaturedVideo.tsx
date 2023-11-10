@@ -19,19 +19,18 @@ const FeaturedVideo = () => {
           Featured video
         </motion.h1>
 
-        <div className="flex flex-col lg:flex-row border border-16">
-          <div className="basis-1/2">
-            <Video videoSrc="/video/omoluabi.mp4" />
+        <div className="flex flex-col lg:flex-row-reverse border border-16">
+          <div className="basis-2/3 bg-primary overflow-hidden">
+            <Video />
           </div>
-          <div className="basis-1/2 relative bg-secondary text-white font-bold italic flex justify-center items-center text-center p-4 text-2xl">
-            <p className="text-red-700 text-9xl absolute top-4 left-4 ">
-              &quot;
+          <div className="basis-1/3 relative bg-secondary text-white font-bold italic flex flex-col space-y-8 p-4 ">
+            <p className="text-red-700">
+              Video
             </p>{" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat
-            asperiores ipsam accusantium dolorem cumque ex cum. Neque,
-            temporibus perspiciatis. Eos ad sequi ab libero doit mollitia
-            deleniti soluta doloribus.{" "}
-            <p className="text-red-700 text-9xl absolute -bottom-8 right-8">&quot;</p>
+            <p className="text-lg lg:text-2xl">
+            Senator AbdulFatai Buhari talking about APC Crisis in Oyo State With | Edmund Obilo | State Affairs
+            </p> {" "}
+            <p>24 September 2020</p>
           </div>
         </div>
       </section>

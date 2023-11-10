@@ -29,6 +29,7 @@ h6 {
 :root {
   --primary-color: #00355f;
   --secondary: #242528;
+  --overlay: rgba(0,0,0,0.7)
 }
 
 @media (prefers-color-scheme: dark) {

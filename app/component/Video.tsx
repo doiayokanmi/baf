@@ -1,15 +1,18 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
-const Video = ({videoSrc}: {videoSrc: string}) => {
+const Video = () => {
   return (
-    <div className='overflow-hidden'>
-        <motion.video initial={{ scale: 1.03 }} whileHover={{ scale: 1 }} width="640" height="360" controls>
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </motion.video>
-    </div>
-  )
-}
+    <motion.iframe initial={{scale:1.03}} whileHover={{scale:1}}
+      className="w-full"
+      height="315"
+      src="https://www.youtube.com/embed/cxPGYYilH1E?si=LsNSSUcKk7Wdee5_"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></motion.iframe>
+  );
+};
 
-export default Video
+export default Video;

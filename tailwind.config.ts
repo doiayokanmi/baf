@@ -15,6 +15,7 @@ const config: Config = {
      colors: {
       primary: 'var(--primary-color)',
       secondary: 'var(--secondary)',
+      overlay: 'var(--overlay)'
      }
     },
   },
