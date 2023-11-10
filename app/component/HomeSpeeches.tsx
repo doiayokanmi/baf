@@ -24,7 +24,7 @@ const HomeSpeeches = () => {
         <SpeechesCard />
       </div>
       <motion.div initial={{scale:1}} whileTap={{scale:0.95}} whileHover={{scale:1.02}} className="my-6 flex justify-end">
-        <Link href="/speeches" className="bg-primary w-full lg:w-auto text-white p-4">Read more speeches</Link>
+        <Link href="/speeches" className="bg-primary rounded w-full lg:w-auto text-white p-4">click for more speeches</Link>
       </motion.div>
     </motion.section>
   );
