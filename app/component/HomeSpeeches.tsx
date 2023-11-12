@@ -1,7 +1,6 @@
 import { useInView, motion } from "framer-motion";
 import React, { useRef } from "react";
 import SpeechesCard from "./SpeechesCard";
-import Link from "next/link";
 
 const HomeSpeeches = () => {
   const container = useRef(null);
@@ -23,9 +22,7 @@ const HomeSpeeches = () => {
         <SpeechesCard />
         <SpeechesCard />
       </div>
-      <motion.div initial={{scale:1}} whileTap={{scale:0.95}} whileHover={{scale:1.02}} className="my-6 flex justify-end">
-        <Link href="/speeches" className="bg-primary rounded w-full lg:w-auto text-white p-4">click for more speeches</Link>
-      </motion.div>
+    
     </motion.section>
   );
 };

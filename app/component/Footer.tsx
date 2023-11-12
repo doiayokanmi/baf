@@ -1,5 +1,6 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,7 +17,21 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="text-white font-bold text-sm lg:text-lg w-full text-center uppercase bg-primary"></div>
+        <div className="text-white flex items-center justify-center space-x-4 py-2 font-bold text-sm lg:text-lg w-full text-center capitalize">
+          <p>follow us:</p>{" "}
+          <Link className="bg-white rounded p-1 text-primary" href="/">
+            <Facebook size={12} />
+          </Link>
+          <Link className="bg-white rounded p-1 text-primary" href="/">
+            <Twitter size={12} />
+          </Link>
+          <Link className="bg-white rounded p-1 text-primary" href="/">
+            <Instagram size={12} />
+          </Link>
+          <Link className="bg-white rounded p-1 text-primary" href="/">
+            <Linkedin size={12} />
+          </Link>
+        </div>
       </div>
     </>
   );
