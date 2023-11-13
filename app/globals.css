@@ -25,6 +25,21 @@ h5,
 h6 {
   font-family: "Poppins", sans-serif;
 }
+@keyframes marqueeAnimation {
+  from {
+    transform: translateX(100%);
+  }
+  
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marqueeAnimation 20s linear infinite; /* Adjust the duration as needed */
+}
+
+
 
 :root {
   --primary-color: #00355f;
