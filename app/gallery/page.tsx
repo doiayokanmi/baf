@@ -6,9 +6,8 @@ import PhotoCard from "../component/PhotoCard";
 import { yearsArray } from "@/util";
 
 
-const page = () => {
-
-    const [value, setValue] = useState('')
+const Page = () => {
+  const [value, setValue] = useState("");
 
   return (
     <>
@@ -21,14 +20,18 @@ const page = () => {
           <div className="flex justify-between border rounded p-4 items-center">
             <h1 className="font-extrabold">All Photos</h1>
             <div className="flex space-x-2 items-center">
-                <p>Select year:</p>
-            <select className="rounded" value={value} onChange={(newValue) => setValue(newValue)}>
-                {
-                    yearsArray.map((year, index) =>(
-                        <option key={index} value="">{year}</option>
-                    ))
-                }
-            </select>
+              <p>Select year:</p>
+              <select
+                className="rounded"
+                value={value}
+                onChange={(newValue) => setValue(newValue)}
+              >
+                {yearsArray.map((year, index) => (
+                  <option key={index} value="">
+                    {year}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
 
@@ -56,4 +59,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
