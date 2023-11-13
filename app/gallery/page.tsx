@@ -24,10 +24,10 @@ const Page = () => {
               <select
                 className="rounded"
                 value={value}
-                onChange={(newValue) => setValue(newValue)}
+                onChange={(e) => setValue(e.target.value)}
               >
                 {yearsArray.map((year, index) => (
-                  <option key={index} value="">
+                  <option key={index} value={year}>
                     {year}
                   </option>
                 ))}
