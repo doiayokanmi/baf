@@ -36,7 +36,7 @@ h6, .heading {
 }
 
 .animate-marquee {
-  animation: marqueeAnimation 20s linear infinite; /* Adjust the duration as needed */
+  animation: marqueeAnimation 20s linear infinite; 
 }
 
 

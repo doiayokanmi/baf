@@ -19,10 +19,12 @@ const Navbar = () => {
     <>
       <div className="sticky top-0 z-50 bg-white shadow-md">
       <nav className="flex items-center justify-between border-b lg:px-24 py-2 p-4">
-        <Image src={"/image/logo.svg"} width={150} height={40} alt="logo" />
+        <Link href='/'>
+        <Image src={"/image/logo.png"} width={70} height={20} alt="logo" />
+        </Link>
 
         <div
-          className={`flex overflow-hidden lg:flex-row flex-col lg:static bg-white absolute top-[70px] left-0 w-screen lg:w-auto lg:space-y-0 px-4 ${
+          className={`flex overflow-hidden lg:flex-row flex-col lg:static bg-white absolute top-[55px] left-0 w-screen lg:w-auto lg:space-y-0 px-4 ${
             openMenu ? "h-[900px] py-4" : "h-0"
           } lg:h-auto lg:space-x-8 transition-all ease-in-out duration-200`}
         >

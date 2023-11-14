@@ -10,10 +10,10 @@ const Quotes = () => {
       <motion.div
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.02 }}
-        className="flex justify-end lg:px-24"
+        className="flex justify-end lg:px-24 px-4 text-xs lg:text-base"
       >
         <div className="bg-primary uppercase relative rounded w-full text-white p-4">
-        <p className="absolute h-full p-4 bg-red-700 z-20 font-extrabold top-0 left-0">Latest News:</p>
+        <p className="absolute h-full p-4 bg-red-700 z-20 font-extrabold  top-0 left-0">Latest News:</p>
         <div className="overflow-hidden">
       <p className="whitespace-nowrap animate-marquee">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ea, necessitatibus a quos eius itaque eum non, consequatur, repudiandae doloremque est dolores tenetur aperiam illo error consequuntur! Aut, nam consequatur!
