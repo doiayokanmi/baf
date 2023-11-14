@@ -1,6 +1,6 @@
 import { useInView, motion } from "framer-motion";
 import React, { useRef } from "react";
-import SpeechesCard from "./SpeechesCard";
+import SpeechesCard from "./Cards/SpeechesCard";
 
 const HomeSpeeches = () => {
   const container = useRef(null);
