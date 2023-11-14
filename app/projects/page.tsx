@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import LayoutPage from "../component/LayoutPage";
 import PageHead from "../component/PageHead";
 import { yearsArray } from "@/util";
-import ProjectsCard from "../component/ProjectsCard";
+import ProjectsCard from "../component/Cards/ProjectsCard";
 
 const Page = () => {
   const [value, setValue] = useState("");
@@ -39,6 +39,15 @@ const Page = () => {
           <div className="flex flex-col lg:flex-row flex-wrap">
 
             <ProjectsCard />
+            <ProjectsCard />
+            <ProjectsCard />
+            <ProjectsCard />
+            <ProjectsCard />
+            <ProjectsCard />
+            <ProjectsCard />
+            <ProjectsCard />
+            <ProjectsCard />
+
           </div>
         </section>
       </LayoutPage>

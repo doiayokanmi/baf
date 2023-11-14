@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import LayoutPage from "../component/LayoutPage";
-import PhotoCard from "../component/PhotoCard";
+import PhotoCard from "../component/Cards/PhotoCard";
 import { yearsArray } from "@/util";
 import PageHead from "../component/PageHead";
 

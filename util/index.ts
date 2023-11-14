@@ -9,7 +9,7 @@ export const links = [
     },
     {
         title: 'Projects',
-        linkto: 'projects'
+        linkto: '/projects'
     },
     {
         title: 'Speeches',

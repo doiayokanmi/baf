@@ -13,6 +13,12 @@
   font-style: normal;
 }
 
+:root {
+  --primary-color: #00355f;
+  --secondary: #242528;
+  --overlay: rgba(0, 0, 0, 0.7);
+}
+
 * {
   font-family: Geomanist, sans-serif;
 }
@@ -22,30 +28,47 @@ h2,
 h3,
 h4,
 h5,
-h6, .heading {
+h6,
+.heading {
   font-family: "Poppins", sans-serif;
 }
 @keyframes marqueeAnimation {
   from {
     transform: translateX(100%);
   }
-  
+
   to {
     transform: translateX(-100%);
   }
 }
 
 .animate-marquee {
-  animation: marqueeAnimation 20s linear infinite; 
+  animation: marqueeAnimation 20s linear infinite;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+*::-webkit-scrollbar:hover {
+  opacity: 1;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--secondary);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
 }
 
 
-
-:root {
-  --primary-color: #00355f;
-  --secondary: #242528;
-  --overlay: rgba(0,0,0,0.7)
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
