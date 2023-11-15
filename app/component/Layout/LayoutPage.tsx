@@ -1,8 +1,8 @@
 "use client";
 
-import AnimatedWrapper from "./AnimatedWrapper";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import AnimatedWrapper from "../AnimatedWrapper";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 export default function LayoutPage({ children }: {children: React.ReactNode}) {
   return (

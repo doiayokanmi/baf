@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-import LayoutPage from "../component/LayoutPage";
+import LayoutPage from "../component/Layout/LayoutPage";
 import PhotoCard from "../component/Cards/PhotoCard";
 import { yearsArray } from "@/util";
 import PageHead from "../component/PageHead";
