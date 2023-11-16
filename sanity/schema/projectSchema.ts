@@ -5,6 +5,28 @@ export const project = {
   fields: [{ name: "title", title: "Title", type: "string" }],
 };
 
+export const gallery = {
+    name: 'gallery',
+    title: 'Gallery',
+    type: 'document',
+    fields: [
+        {
+            name: 'description',
+            title: 'Description',
+            type: 'string',
+        },
+        
+        {
+            name: 'image',
+            title: 'Select Image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            }
+        }
+    ]
+}
+
 export const speeches = {
     name: "speeches",
     title: "Speeches",
