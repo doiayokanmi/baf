@@ -1,6 +1,6 @@
 import { createClient, groq } from "next-sanity";
 
-export async function getData() {
+export async function getGallery() {
   const client = createClient({
     projectId: "ec7o9bmp",
     dataset: "production",
@@ -11,8 +11,8 @@ export async function getData() {
     groq`*[_type=='gallery'] {
         _id,
         _createdAt,
-        image:image.asset.url,
+        "image": image.asset->url,
         description,
     }`
-  )
+  );
 }
