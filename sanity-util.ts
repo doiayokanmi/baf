@@ -43,14 +43,16 @@ export async function loadSpeeches(slug: string) {
   });
 
   return client.fetch(
-    groq`*[_type=='speeches' && slug.current = ${slug}] {
+    groq`*[_type=='speeches' && slug.current == $slug] {
         _id,
         _createdAt,
         title,
         date,
-        speech
-        'slug':slug.current,
+        speech,
+        'slug': slug.current,
         "image": image.asset->url,
-    }`
+    }`,
+    { slug }
   );
 }
+
