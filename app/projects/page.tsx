@@ -1,13 +1,42 @@
-'use client'
+"use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LayoutPage from "../component/Layout/LayoutPage";
 import PageHead from "../component/PageHead";
 import { yearsArray } from "@/util";
 import ProjectsCard from "../component/Cards/ProjectsCard";
+import { getProjects } from "@/sanity-util";
+
+interface Props {
+  _id: string;
+  title: string;
+  slug: string;
+  date: string;
+  description: string[];
+  image: Array<{
+    url: string;
+    metadata: {
+      caption: string;
+    };
+  }>;
+}
 
 const Page = () => {
   const [value, setValue] = useState("");
+  const [data, setData] = useState<Props[]>([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const projects = await getProjects();
+        setData(projects);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      }
+    };
+
+    getData();
+  }, []);
 
   return (
     <>
@@ -37,17 +66,16 @@ const Page = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row flex-wrap">
-
-            <ProjectsCard />
-            <ProjectsCard />
-            <ProjectsCard />
-            <ProjectsCard />
-            <ProjectsCard />
-            <ProjectsCard />
-            <ProjectsCard />
-            <ProjectsCard />
-            <ProjectsCard />
-
+            {data.map((project) => (
+              <ProjectsCard
+                key={project._id}
+                title={project.title}
+                slug={project.slug}
+                date={project.date}
+                description={project.description}
+                image={project.image}
+              />
+            ))}
           </div>
         </section>
       </LayoutPage>

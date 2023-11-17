@@ -56,3 +56,32 @@ export async function loadSpeeches(slug: string) {
   );
 }
 
+export async function getProjects() {
+  const client = createClient({
+    projectId: "ec7o9bmp",
+    dataset: "production",
+    apiVersion: "2023-11-16",
+  });
+
+  return client.fetch(
+    groq`*[_type=='projects'] {
+        _id,
+        _createdAt,
+        title,
+        date,
+        'description': description[]{
+          _key,
+          _type,
+          children,
+          markDefs,
+          style,
+        },
+        'image': image[] {
+          'url': asset->url,
+          'metadata': asset->metadata
+        },
+        'slug':slug.current,
+    }`
+  );
+}
+

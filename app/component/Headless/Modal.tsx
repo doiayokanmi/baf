@@ -1,6 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import ProjectsCard from '../Cards/ProjectsCard';
 
 export default function Modal({
   isOpen,
@@ -46,12 +45,7 @@ export default function Modal({
                     {title}
                   </Dialog.Title>
                   <div className="mt-2 flex-wrap flex-col lg:flex-row overflow-y-scroll overflow-x-hidden h-[700px] lg:max-h-[450px] flex w-full">
-                    <ProjectsCard />
-                    <ProjectsCard />
-                    <ProjectsCard />
-                    <ProjectsCard />
-                    <ProjectsCard />
-
+                    
                   </div>
 
                 </Dialog.Panel>

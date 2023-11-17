@@ -40,11 +40,7 @@ const Details: React.FC<DetailsProps> = ({ params }) => {
   return (
     <>
       <LayoutPage>
-        {/* <PageHead
-          title="Speeches by Sen. AbdulFatai Buhari Omotayo"
-          bgImage="/image/speeches.png"
-        /> */}
-
+        
         <SpeechesLayout>
           {data && (
             <div className="flex flex-col space-y-4">

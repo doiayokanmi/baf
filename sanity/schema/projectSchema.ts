@@ -1,8 +1,56 @@
-export const project = {
-  name: "project",
-  title: "BAF Project",
+export const projects = {
+  name: "projects",
+  title: "Projects",
   type: "document",
-  fields: [{ name: "title", title: "Title", type: "string" }],
+  fields: [
+    { 
+      name: "title", 
+      title: "Title", 
+      type: "string", 
+    },
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 200,
+      }
+    },
+    {
+      name: "date",
+      title: "Date",
+      type: "date",
+      options: {
+        dateFormat: "YYYY-MM-DD",
+      },
+    },
+    {
+      name: "description",
+      title: "Description",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+      ],
+    },
+    {
+      name: "image",
+      title: "Images",
+      type: "array",
+      of: [
+        {
+          name: "image",
+          title: 'Select Three Images',
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+    },
+  ],
 };
 
 export const gallery = {
@@ -24,7 +72,7 @@ export const gallery = {
       title: "Description",
       type: "string",
     },
-  
+
     {
       name: "date",
       title: "Date",
@@ -33,7 +81,6 @@ export const gallery = {
         dateFormat: "YYYY-MM-DD",
       },
     },
-    
   ],
 };
 
@@ -49,12 +96,12 @@ export const speeches = {
     },
 
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'title', 
-        maxLength: 200, 
+        source: "title",
+        maxLength: 200,
       },
     },
 
@@ -64,7 +111,7 @@ export const speeches = {
       type: "image",
       options: {
         hotspot: true,
-      }
+      },
     },
 
     {
@@ -72,8 +119,8 @@ export const speeches = {
       title: "Date of event",
       type: "date",
       options: {
-        dateFormat: '27/09/2023'
-      }
+        dateFormat: "27/09/2023",
+      },
     },
 
     {
