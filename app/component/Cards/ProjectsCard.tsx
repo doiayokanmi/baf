@@ -4,11 +4,16 @@ import React, { useState } from "react";
 import Modal from "../Headless/Modal";
 import Image from "next/image";
 
+interface Block {
+  _type: string;
+  children: { text: string }[];
+}
+
 interface Props {
   title: string;
   slug: string;
   date: string;
-  description: string[];
+  description: Block[];
   image: Array<{
     url: string;
     metadata: {
@@ -43,7 +48,7 @@ const ProjectsCard: React.FC<Props> = ({ title, slug, date, image, description }
           </div>
         </div>
       </div>
-      <Modal isOpen={isOpen} closeModal={closeModal} title={title} />
+    <Modal isOpen={isOpen} closeModal={closeModal} image={image} date={date} description={description} title={title} />
     </>
   );
 };
