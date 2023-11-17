@@ -17,11 +17,13 @@ interface dataProps {
 const Page = () => {
   const [value, setValue] = useState("");
   const [data, setData] = useState<dataProps[]>([]);
-  const [times, setTimes] = useState<number>(15);
+  const [allData, setAllData] = useState<dataProps[]>([]);
+  const [times, setTimes] = useState<number>(9);
 
   useEffect(() => {
     const getData = async () => {
       const allGallery = await getGallery();
+      setAllData(allGallery);
       setData(allGallery.slice(0, times));
     };
 
@@ -56,7 +58,7 @@ const Page = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row flex-wrap">
-            {data.map((photo, index) => (
+            {data.map((photo) => (
               <PhotoCard
                 key={photo._id}
                 description={photo.description}
@@ -65,13 +67,14 @@ const Page = () => {
             ))}
           </div>
 
-          <div className={`flex justify-center my-4 ${data.length <= times && 'hidden'}`}>
+          <div className={`justify-center my-4 flex`}>
             <motion.button
               onClick={() => setTimes(times + 9)}
               whileTap={{ scale: 0.9 }}
-              className="w-full lg:w-auto p-4 bg-primary text-white"
+              className={`w-full lg:w-auto p-4 bg-primary disabled:bg-gray-400 text-white`}
+              disabled={allData.length <= times}
             >
-              Load more image
+              {allData.length <= times ? 'No more photos' : 'Load more image'}
             </motion.button>
           </div>
         </section>

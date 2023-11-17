@@ -11,19 +11,6 @@ export const gallery = {
   type: "document",
   fields: [
     {
-      name: "description",
-      title: "Description",
-      type: "string",
-    },
-    {
-      name: "date",
-      title: "date",
-      type: "date",
-      options: {
-        dateFormat: "YYYY-MM-DD",
-      },
-    },
-    {
       name: "image",
       title: "Select Image",
       type: "image",
@@ -31,6 +18,22 @@ export const gallery = {
         hotspot: true,
       },
     },
+
+    {
+      name: "description",
+      title: "Description",
+      type: "string",
+    },
+  
+    {
+      name: "date",
+      title: "Date",
+      type: "date",
+      options: {
+        dateFormat: "YYYY-MM-DD",
+      },
+    },
+    
   ],
 };
 
@@ -44,6 +47,35 @@ export const speeches = {
       title: "Title",
       type: "string",
     },
+
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title', 
+        maxLength: 200, 
+      },
+    },
+
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      }
+    },
+
+    {
+      name: "date",
+      title: "Date of event",
+      type: "date",
+      options: {
+        dateFormat: '27/09/2023'
+      }
+    },
+
     {
       name: "speech",
       title: "Speech",

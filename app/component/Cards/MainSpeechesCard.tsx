@@ -1,17 +1,22 @@
 import React from "react";
 import Link from "next/link";
 
-const MainSpeechesCard = () => {
+interface props {
+  title: string;
+  date: string;
+  slug: string;
+}
+
+const MainSpeechesCard = ({title, date, slug}:props) => {
   return (
     <>
-      <Link href="/" className="basis-1/2 lg:odd:pe-2 lg:even:ps-2">
+      <Link href={`/speeches/${slug}`} className="basis-1/2 lg:odd:pe-2 lg:even:ps-2">
         <div className="hover:text-primary py-4 border-b">
           <p className="font-bold text-xl">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora,
-            a?
+            {title} 
           </p>
 
-          <p className="text-red-700 mt-4">12 October, 2023</p>
+          <p className="text-red-700 mt-4">{date}</p>
         </div>
       </Link>
     </>
