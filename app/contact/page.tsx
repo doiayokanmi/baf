@@ -11,7 +11,7 @@ const page = () => {
       <LayoutPage>
         <PageHead title="Contact Page" bgImage="/image/contact.jpg" />
         <SpeechesLayout>
-          <div className="flex lg:space-x-4 space-y-2 lg:space-y-0 justify-between">
+          <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-2 lg:space-y-0 justify-between">
             <div className="basis-1/2 flex-1 border rounded">
               <input
                 type="text"
